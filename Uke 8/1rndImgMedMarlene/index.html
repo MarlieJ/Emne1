@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .frames {
+        border: solid black;
+        height: 200px;
+        width: 200px;
+        cursor: pointer;
+      }
+      .frameImage {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frames" onclick="pushToChoose(this)"></div> <br>
+    <div class="frames" onclick="pushToChoose(this)"></div> <br>
+    <div class="frames" onclick="pushToChoose(this)"></div> <br>
+
+
+    <script>
+        function pushToChoose (divenSomKaltePåMeg){
+        
+          let number = Math.floor(Math.random()*5);
+          //divenSomKaltePåMeg vet vi hva er
+          //istad så visste vi det ikke (vi sendte ikke med this), så da måtte vi finne den via:
+          //document.getElementById("frames")... Problemet ble at siden det er flere med samme ID,
+          //og vi bare skulle endre den vi trykket på ble det umulig å skille de.
+
+          // document.getElementById('frames').innerHTML = 
+          // let number = Math.floor(Math.random()*4);
+          //Må deklareres før document.... "Før du bruker den".
+          //syntax er sammensetningen/rekkefølgen av koden = gramatikken til kodespråket
+
+          // for (
+          //   let index = 1; //index er 0. Der vi starter.
+          //   index < 4; //er index mer enn 3? Hvis den ikke er det, kjører koden inni løkka
+          //   index++) //legg på 1
+          //   { 
+          //     console.log(index);
+            
+          // }
+
+          
+          let bildenavn ='<img class="frameImage" src="Bilder/nr' + number + 'tre.png">';
+          //let bildenavn =`<img class="frames" src="Bilder/nr${number}tre.png">`;
+          divenSomKaltePåMeg.innerHTML = bildenavn;
+          
+          // for (let tellern = 1; tellern < makstall; tellern++) 
+          // {
+          //   console.log("index er " + tellern);
+          //   let bildenavn = '<img src="Biler/nr' + tellern  + 'tre.png">';
+          //   this.innerHTML = bildenavn;
+          // }
+            // if (number == 0){
+
+            // }
+            // else if (number == 1){
+              
+            // }
+            // else if (number == 2){
+              
+            // }
+        
+            // <img src="Bilder/nr1tre.png">
+
+            // <img src="Bilder/nr2tre.png">
+            // <img src="Bilder/nr3tre.png">
+        }
+      
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="nameDiv">Jeg heter </div>
+    <button onclick="changeName('Bjarne')">Bjarne</button>
+    <button onclick="changeName('Thomas')">Thomas</button>
+    <button onclick="changeName('Nils')">Nils</button>
+
+    <div id="workDiv">Jeg jobber på </div>
+    <button onclick="changeWork(this)">GET</button>
+    <button onclick="changeWork(this)">Verktøysbutikken</button>
+    <button onclick="changeWork(this)">Jernia</button>
+
+    <div id="tacodiv">Jeg elsker </div>
+    <button onclick="changeFavorite(this)">Taco</button>
+    <button onclick="changeFavorite(this)">Pizza</button>
+    <button onclick="changeFavorite(this)">Burger</button>
+
+    <script>
+
+        let name = "Thomas";
+        let workPlace = "GET";
+        let favoritefood = "Taco";
+
+        updateinfo() //er det noen grunn for at denne står her? Koden fungerer fortsatt uten... Men var der i undervisningen...
+
+        changeName('Inge')
+        changeName('Kurt')
+        changeName('Kåre')
+
+
+        
+        function changeName(nameToChangeTo) {
+            console.log(nameToChangeTo)
+            name = nameToChangeTo;
+            updateinfo()
+        }
+
+
+        function changeWork(buttonClicked) {
+            console.log('her er verdien på variabelen: ' + buttonClicked)
+            workPlace = buttonClicked.innerHTML
+            updateinfo()
+        }
+
+
+        function changeFavorite(mottarthis){
+            favoritefood = mottarthis.innerHTML
+            updateinfo()
+        }
+
+
+        function updateinfo() {
+            document.getElementById('nameDiv').innerHTML = `jeg heter ${name}`;
+            document.getElementById('workDiv').innerHTML = `Jeg jobber på ${workPlace}`;
+            document.getElementById('tacodiv').innerHTML = `Jeg elsker ${favoritefood}`;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #drawingArea {
+            display: grid;
+            grid-template-columns: repeat(12, 100px);
+            grid-template-rows: repeat(12, 100px);
+        }
+
+        #palett {
+            display: grid;
+            grid-template-columns: repeat(12, 100px);
+            grid-template-rows: repeat(1, 100px);
+        }
+
+        div.cell {
+            border: 1px solid gray;
+        }
+
+        #selectedColor {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function colorTest() {
+            let myDiv = document.getElementById('selectedColor');
+            myDiv.style.backgroundColor = 'yellow';
+        }
+        function velgFarge(clickedDiv) {
+            let myDiv = document.getElementById('selectedColor');
+            myDiv.style.backgroundColor = clickedDiv.style.backgroundColor;
+        }
+        function tegn(clickedDiv) {
+            let myDiv = document.getElementById('selectedColor');
+            clickedDiv.style.backgroundColor = myDiv.style.backgroundColor;
+        }
+    </script>
+
+    Farger:
+    <div id="palett">
+        <div onclick="velgFarge(this)" style="background-color: red"></div>
+        <div onclick="velgFarge(this)" style="background-color: blue"></div>
+        <div onclick="velgFarge(this)" style="background-color: green"></div>
+        <div onclick="velgFarge(this)" style="background-color: white"></div>
+        <div onclick="velgFarge(this)" style="background-color: black"></div>
+    </div>
+
+    Valgt farge:
+    <div id="selectedColor">
+
+    </div>
+
+    Tegn her:
+    <div id="drawingArea">
+        <div onclick="tegn(this)" class="cell"></div>
+        <div onclick="tegn(this)" class="cell"></div>
+        <div onclick="tegn(this)" class="cell"></div>
+        <div onclick="tegn(this)" class="cell"></div>
+        <div onclick="tegn(this)" class="cell"></div>
+        <div onclick="tegn(this)" class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+
+</body>
+
+</html>

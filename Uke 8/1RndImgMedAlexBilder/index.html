@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .bilder {
+        height: 20px;
+        width: 500px
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"><button onclick="updateView()">Trykk her for å få et random bilde 😈</button></div>
+    <script>
+    //   let myNumber = 4;
+      let myNumber = Math.floor(Math.random()*5)
+      let nyNumber;
+      // den er deklarert selv uten verdi
+      //floor/ceil runder ned/opp
+      //regnes ut når scriptet lastes inn
+//starter å kjøre igang av seg selv første gang man oppdaterer siden (så gir den et nummer mellom 0-4(heltall). det ligger ibakgrunnen av "konsollen", og det tallet som da ligger der, kaller vi for mynumber )
+      //første stedet koden finner den= deklarer
+      function updateView() {
+        document.getElementById("app").innerHTML = /*html*/ `
+
+        `;
+        velgBilde();
+       
+      }
+      function velgBilde() {
+        if (myNumber == 1) {
+          document.getElementById("app").innerHTML = /*html*/ `
+              <div id="box1" class="bilder">
+                  <img src="Bilder/nr1tre.png" height="200px">
+                  </div>
+              `;
+        } else if (myNumber == 2) {
+          document.getElementById("app").innerHTML = /*html*/ `
+              <div id="box1" class="bilder">
+                  <img src="Bilder/nr2tre.png" height="200px">
+                  <button onclick="updateView()">Trykk her for å få et random bilde 😈</button>
+                  </div>
+              `;
+        } else if (myNumber == 3) {
+          document.getElementById("app").innerHTML = /*html*/ `
+              <div id="box1" class="bilder">
+                  <img src="Bilder/nr3tre.png" height="200px">
+                  </div>
+              `;
+        } else if (myNumber == 4) {
+          document.getElementById("app").innerHTML = /*html*/ `
+              <div id="box1" class="bilder">
+                <button onclick="updateView()">Trykk her for å få et random bilde 😈</button><br>
+                  <img src="Bilder/nr4tre.png" height="200px">
+                  </div>
+              `;
+        } else {
+          document.getElementById("app").innerHTML = /*html*/ `
+              <div id="box1" class="bilder">
+                  <img src="Bilder/nr0tre.png" height="200px">
+                  </div>
+              `;
+        }
+      }
+    </script>
+  </body>
+</html>

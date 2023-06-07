@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romspillet</title>
+</head>
+<style>
+    body {
+        background-color: aqua;
+    }
+    .yellow {
+        background-color: rgb(233, 255, 64);
+        
+    }
+</style>
+
+<body>
+    <div style="background-color: pink;" id="game">
+Velkommen til spillet. Målet er å lete til du kommer til riktig rom. <br> <br> <button onclick="goToA()">Start</button>
+    </div>
+    <div style="font-family: 'Courier New', Courier, monospace; background-color: rgb(233, 255, 64);">
+        Spillernavn: <input class="yellow" rgb(237, 255, 105);" type="text"><button class="yellow">Go!</button>
+    </div>
+    
+    
+    <script>
+        function 
+        function goToA() {
+            document.getElementById('game').innerHTML = /*html*/`
+            Du er i rom A.Det er to dører:
+            <ul>
+                <li><button onclick="goToB()">Gå til B</button></li>
+                <li><button onclick="goToD()">Gå til D</button></li>
+            </ul>
+            `;
+        }
+        function goToB() {
+            document.getElementById('game').innerHTML = /*HTML*/`
+        Du er i rom B. Det er to dører.
+        <ul>
+            <li><button onclick="goToC()">Gå til C</button></li>
+            <li><button onclick="goToA()">Gå til A</button></li>
+        </ul>    
+        `;
+        }
+        function goToC() {
+            document.getElementById('game').innerHTML = /*HTML*/`
+        Du er i rom C. Det er én dør.
+        <ul>
+            <li><button onclick="goToB()">Gå til B</button></li>
+        </ul>    
+        `;
+        }
+        function goToD() {
+            document.getElementById('game').innerHTML = /*HTML*/`
+        Du fant rommet! 🎉 Du er i rom D. Det er én dør.
+        <ul>
+            <li><button onclick="goToA()">Gå til A</button></li>
+        </ul>    
+        `;
+        }
+        function goToD() {
+            document.getElementById('game').innerHTML = /*HTML*/`
+        Du fant rommet! 🎉 Du vant. 
+            <button onclick="goToA()">Start på nytt</button>
+        `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dyr" onclick="hentDyr()">Trykk</div>
+    <input onchange="leggTilDyr(this.value)" type="text">
+
+    <script>
+        let dyr = ['hund', 'katt', 'esel']
+        
+        function hentDyr(){
+        let rndTall = (Math.floor(Math.random() * dyr.length));
+        document.getElementById('dyr').innerHTML = dyr[rndTall];//jeg kan putte hva jeg vil inni firkantklammene, så lenge det er en tallVerdi, noe rndTall nå er.
+        }
+
+        function leggTilDyr(nyttDyr){
+            dyr.push(nyttDyr);
+        }
+        
+    </script>
+</body>
+</html>

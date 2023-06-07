@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //MODEL
+        let inputValue = '';
+        let handleListe = ['Melk', 'Bakepulver', 'Kakao', 'Egg', 'Smør']
+
+        //VIEW
+        show()
+        function show(){
+            let html= '';
+
+            for (let i = 0; i < handleListe.length; i++) {
+                html += /*html*/`
+                <li>
+                    ${handleListe[i]}
+                    <button onclick="changeItem(${i})">Change</button>
+                    <button onclick="deleteItem(${i})">Delete</button>
+                </li>
+                `;                
+            }
+        
+            html += /*html*/`<input oninput="tekst(this)" type="text">
+            <button onclick="addItem()"> Legg til </button>`;
+            document.getElementById('app').innerHTML = html;
+        }
+/* function tekst(mottarThis){
+inputValue = mottarThis.value;
+}
+//google eventListenser?
+//https://www.w3schools.com/jsref/event_oninput.asp
+//https://www.w3schools.com/js/js_htmldom_eventlistener.asp (Ikke bruk denne måten, men bruk den til å forstå...)
+        //CONTROLLER
+        function addItem(){
+            handleListe.push(inputValue);
+            //inputValue pushes til handleliste, altså motsatt rekkefølge
+            inputValue = "";
+            show()
+            console.log(inputValue);
+        }
+
+        function deleteItem(hvaJegVil){
+            //hvaJegVil snakker med parameteret i deleteItem(inni her ${]).
+                //Så i løsningsforslag kalte de den index, men den kan hete hva den vil fordi det er parentesen som er sendt med som sender informasjonen ish. 
+            handleListe.splice(hvaJegVil,1);
+            show();
+        }
+
+        function changeItem(indexX){
+            handleListe[indexX] = inputValue;
+            show();
+        } */
+        
+        
+    </script>
+</body>
+</html>

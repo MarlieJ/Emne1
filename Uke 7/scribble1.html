@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div> <br>
+    <button onclick="setNum(10)">set number to 10</button>
+    <button onclick="setNum(50)">set number to 50</button>
+    <button onclick="increaseNum()">Increase number by 1</button>
+    <button onclick="secNum()">Add 2</button>
+
+    <script>
+        let innerApp = document.getElementById('app');
+        let numToShow = 0;
+
+
+        function setNum(selectedNum){
+            numToShow = selectedNum;
+            innerApp.innerHTML = numToShow
+        }
+        
+        function increaseNum(){
+            numToShow ++;
+            //numtoshow = numtoshow + 1
+            innerApp.innerHTML = numToShow;
+        }
+
+        function secNum(){
+            var number2 = 2;
+            innerApp.innerHTML = numToShow + number2;
+
+            console.log(numToShow, "<-- dette er verdien i numToShow -- dette er verdien i number2 -->", number2)
+        }
+    </script>
+</body>
+</html>

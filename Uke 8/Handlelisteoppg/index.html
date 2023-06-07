@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        let handleListe = ['Melk', 'Brød', 'Appelsiner', 'Avocado' ];
+        let leggTilNyeVarer = '';
+
+        vis()
+        function vis(){
+            let html= '';
+            for (let i = 0; i < handleListe.length; i++){
+                html +=
+                /*html*/`<li>
+                    ${handleListe[i]}
+                    <button onclick="endreVare(${i})">Endre</button>
+                    <button onclick="slettVare(${i})">Slett</button>
+                    </li>`;
+            }
+        }
+    </script>
+</body>
+</html>

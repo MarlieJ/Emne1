@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="textbox">Personen er bevisstløs:</div>
+            <button onclick="crash(call911)">Ring 113!</button>
+            <button onclick="crash(giHLR)">Start hjerte-lunge redning!</button>
+            `
+
+    <script>
+        function crash(parameter){
+            if(parameter == 'livHjelp'){
+                document.getElementById('app').innerHTML = mainEvents[0]
+                kulhet ++;
+            } else if(parameter == 'fortsettFrem'){
+                document.getElementById('app').innerHTML = mainEvents[0];
+                kulhet --;
+            } else {
+                kulhet += 10;
+            }
+        }
+        function giveHelp(){
+            if (paramter == 'call911'){
+                document.getElementById('app').innerHTML = mainEvents[0];
+                kulhet += 20;
+            }
+            else {
+                kulhet += 20;
+                document.getElementById('app').innerHTML = mainEvents[0];
+            }
+
+        }
+
+        function roiMøte(){
+            if (parameter == 'vinke'){
+            }
+            else if (parameter == 'tute'){
+            }
+            else {
+                if (kulhet < 50)
+                document.getElementById('app').innerHTML =
+                "Halla, lame låt"
+                else if(kulhet > 50){
+                    document.getElementById('app').innerHTML =
+                    "halla, fet låt"
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

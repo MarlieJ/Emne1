@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .characterBoxSize {
+        height: 200px;
+        border: solid rgb(243, 203, 6) 8px;
+        border-radius: 10%;
+      }
+      body {
+        background-color: rgb(240, 159, 8);
+      }
+      .battleArea {
+        height: 500px;
+        border: solid rgb(129, 85, 3) 8px;
+        border-radius: 10%;
+        padding: 20px;
+      }
+
+      .buttonStartFight {
+        text-align: center;
+        background-color: rgb(240, 159, 8);
+        border: solid rgb(243, 203, 6) 8px;
+      }
+      .chosenBorderLine{
+        border: solid rgb(224, 109, 9) 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      let hp = "";
+      //let poeng = "";
+      //let valgtKarakter = [];
+
+      updateView();
+      function updateView() {
+        document.getElementById("app").innerHTML = /*html*/ `
+            <h1>Super Mario Spill!</h1>
+    <div><img id="bowser" class="characterBoxSize" onclick="chooseBowser()" src="bilder/bowser.png" alt="">
+        <br> <h2>Beat Bowser</h2>
+    </div>
+    <br>
+    Velg en karakter:<br>
+    <img class="characterBoxSize" id="mario" onclick="chooseCharacter(this)" src="bilder/mario.png" alt="">
+    <img class="characterBoxSize" id="luigi" onclick="chooseCharacter(this)" src="bilder/luigi.png" alt="">
+    <img class="characterBoxSize" id="peach" onclick="chooseCharacter(this)" src="bilder/peach.png" alt="">
+    <img class="characterBoxSize" id="yoshi" onclick="chooseCharacter(this)" src="bilder/yoshi.png" alt="">
+    <button class="buttonStartFight" onclick="startBattle()"><b>Start kamp!</b></button>
+    <!--<img id="sopp" src="bilder/toad.png" alt="">-->
+
+    <h2 class="battleArea" id="battleField">Battlefield</h2>
+    
+    `;
+      }
+
+      function chooseCharacter(chosenCharacter) {
+        // chosenCharacter.class.style.backgroundcolor: black;
+        //valgtKarakter.push(chosenCharacter);
+        //chosenCharacter.style.borderColor = "rgb(224, 109, 9)";
+        chosenCharacter.classList.toggle('chosenBorderLine');
+      }
+
+      function startBattle() {
+        
+            
+        //document.getElementById('battleField').add.chosenCharacter;
+        //battleField.push(chosenCharacter);
+        /* let battle = document.getElementById('battleField');
+           battle += chooseCharacter(chosenCharacter); */
+        //den valgte karakterens bilde skal settes i battlefield sitt area.
+         /* document.getElementById("battleField").innerHTML =
+          document.getElementById("battleField").innerHTML +=
+            chooseCharacter.chosenCharacter; */
+        //document.getElementById('battleField').innerHTML += valgtKarakter;
+          }
+    </script>
+  </body>
+</html>

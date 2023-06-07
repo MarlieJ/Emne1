@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="app"> </div>
+    <script>
+        //Model 
+        let tall1 = 0;
+        let tall2 = 1;
+        let størstTall = '';
+
+        //View 
+        updateView()
+        function updateView() {
+            let html = /*html*/`
+            <div>Tall1: ${tall1}</div>
+            <div>Tall2: ${tall2}</div>
+            <div>størst Tall: ${størstTall}</div>
+            <div onclick="økTallet(this)">1</div>
+            <button onclick="increaseNumber()">increase tall1</button>
+            <button onclick="decreaseNumber()">decrease num</button>
+            <button onclick="whichIsBiggest()">finn størt tall</button>
+
+
+            `
+            document.getElementById ('app').innerHTML = html;
+
+        }
+        
+        //Cotroller
+        function increaseNumber(){
+            tall1++;
+            updateView()
+            //tall1 = tall1 + 1;
+            //tall1 += 1;
+
+        }
+        function decreaseNumber(){
+            tall2--;
+            updateView()
+        }
+        function whichIsBiggest(){
+            //størstTall 
+            if(tall1 > tall2){
+            størstTall = 'tall1 er størst!'
+            }
+            else if(tall2 > tall1){
+                størstTall= 'tall2 er størst'
+            }
+            else{
+                størstTall= 'tallene er like'
+            }
+            updateView()
+
+            //annet ræl
+            checkIfNotEqual ('Linn,'linn')
+
+            function checkIfNotEqual(tacherName, anotherTeacherName){
+                if (tacherName.toLowerCase() !== anotherTeacherName){
+                    console.log('navnene er ikke like!')
+
+                }
+                else [
+                    console.log ('navnene er like!')
+                ]
+            }
+        }
+        function økTallet (divenMin){
+            console.log('DIven min: ' + verdi)
+            let verdi = divenMin.innerHTML;
+            verdi = verdi +5;
+            divenMin.innerHTML = verdi;
+            console.log ('div ny innerhtml: ' + divenMin.innerHTML)
+        }
+
+    </script>
+</body>
+
+</html>

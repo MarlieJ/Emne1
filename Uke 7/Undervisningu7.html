@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <div>tilgjengelige sykler</div>
+    <ul>
+        <li>Sykkel id: 1, Lokasjon: Tønsberg <button>Rent</button></li>
+        <li>Sykkel id: 2, Lokasjon: Sandefjord <button>Rent</button></li>
+        <li>Sykkel id: 2, Lokasjon: Larvik <button>Rent</button></li> 
+        <li>Sykkel id: 2, Lokasjon: Narvik <button>Rent</button></li> 
+    </ul>
+    <div>Utleide sykler</div>
+    <ul>
+        <li>Sykkel id: 5, Bruker: Bjarne, Lokasjon: svarstad <button>Rent</button></li>
+        <li>Sykkel id: 6, Bruker: Nils, Lokasjon: Bergen <button>Rent</button></li>
+    </ul>
+    <script>
+        let sykler = [{
+            id: 1,
+            sted: 'Tønsberg',
+            tilgjenglig: true
+        }
+        {
+            id: 2,
+            sted: 'Sandefjord',
+            tilgjenglig: true
+        }
+        {
+            id: 3,
+            sted: 'Larvik',
+            tilgjenglig: true
+        }
+        {
+            id: 2,
+            sted: 'Narvik',
+            tilgjenglig: true
+        }
+        {
+            id: 5,
+            sted: 'Svarstad',
+            tilgjenglig: false
+        }
+        {
+            id: 6,
+            sted: 'Bergen',
+            tilgjenglig: false
+        }
+
+        ]
+        let rentedBikes= [{
+            bikeid: 5,
+            userid: 4
+        }
+
+        ]
+        let persons = [{
+            name: 'Kari'
+            id: 1,
+            age: 35,
+            Address: 'Bjarnes Kyststi'
+        }
+        {
+            name: 'Kurt',
+            id: 2,
+            age: 40,
+            address: 'Kjærlighetsstien'
+        }
+        {
+            name: 'Nils',
+            id: 3,
+            age: 48,
+            address: 'Kjærlighetsstien'
+        }
+        {
+            name: 'Bjarne',
+            id: 4,
+            age: 48,
+            address: 'Kjærlighetsstien'
+        }
+
+        ]
+        
+        function userView()
+        document.getElementById('app').innerHTML = /*html*/`
+
+        `;
+        function availableBikes(){
+            let html = '';
+            for(let i=0; i<sykler.length; i++){
+                if(sykler[i].tilgjenglig == true){
+                    // vis sykkel
+                    html += ´<li>Sykkel id:${}, Lokasjon: ${sykleri.sted}</li>´
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script>
+        let rndNumber = 0;
+        let rndNumber2 = 0;
+        let poeng= 0;
+        updateView()
+
+        function updateView(){
+            document.getElementById('app').innerHTML = /*html*/`
+            Poeng: ${poeng} <br><br>
+            ${rndNumber}
+            <input id="inputID" type="text">
+            ${rndNumber2}
+            <br><br>
+            <button onclick="submit()"> Submit </button>
+            <button onclick= "reset()"> Reset </button>
+            `;
+        }
+
+        function reset(){
+        rndNumber = Math.floor(Math.random()*11)
+        rndNumber2 = Math.floor(Math.random()*11)
+        updateView()
+        }
+
+        function submit(){
+            let krokoTegn = document.getElementById('inputID').value; 
+            let riktigTegn = skaffRiktigTegn();
+            if (krokoTegn == riktigTegn) {
+                poeng ++;
+            }  
+            else {
+                poeng --;
+            }
+            //reset()
+            updateView()
+            //hvis rndNumber er større enn rndNumber2 så skal krokoTegn være > 
+        }
+        function skaffRiktigTegn(){
+            if (rndNumber > rndNumber2){
+                return '>';
+            }
+            else if (rndNumber < rndNumber2){
+                return '<';
+            }
+            else {
+                return '=';
+            }
+        }
+
+    </script>
+</body>
+</html>

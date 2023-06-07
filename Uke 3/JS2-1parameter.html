@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">Lovecolors</div>
+    <button onclick="endreFarge('pink','150px','100px')"> Bright</button>
+    <button onclick="endreFarge('darkblue','100px','100px')"> Darks</button>
+
+    <script>
+        function endreFarge(color, bredde,høyde) {
+            document.getElementById('maindiv').innerHTML = /*html*/`
+            <div style="background-color:${color}; height: ${høyde}; width: ${bredde};">lovecolors</div>
+
+        `;
+        }
+
+        /*.style.backgroundColor = color
+        document.getElementById('maindiv').style.width = width
+        */
+
+    </script>
+
+</body>
+
+</html>

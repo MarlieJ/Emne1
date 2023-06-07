@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color: blue;" onclick="trykk('orange')"> Blue</div>
+    <div style="background-color: pink;" onclick="trykk(this)" > Pink</div>
+    <div style="background-color: orange;" onclick="trykk(this)">Orange</div>
+    <div id="4" style="background-color: grey;">Grey</div>
+    
+    <script>
+        function trykk(mottarThis){
+            document.getElementById('4').style.backgroundColor = mottarThis;
+        }
+    </script>
+    
+</body>
+</html>

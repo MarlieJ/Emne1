@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="trykkerHer(this)">A</div>
+    <div onclick="trykkerHer(this)">B</div>
+    <div id="tomtHer"></div>
+
+    <script>
+        let counter = 0;
+
+
+        function trykkerHer(mottarThis){
+            let rnd1= Math.floor(Math.random()*10)+1
+            let rnd2= Math.floor(Math.random()*20)+1
+            // counter++;
+            // counter=counter+1;
+            document.getElementById('tomtHer').innerHTML = mottarThis.innerHTML+" "+counter++ +" "+ matte(rnd1,rnd2);
+        }
+        function matte(tall1,tall2){
+            return tall1*tall2
+        }
+
+
+    </script>
+
+</body>
+</html>

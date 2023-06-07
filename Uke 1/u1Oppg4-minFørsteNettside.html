@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min første nettside! :)</title>
+</head>
+<style>
+    button {
+        cursor: pointer;
+    }
+
+    body.bakgrunn {
+        background-color: magenta;
+        padding: 16px;
+    }
+
+    body.styledimg {
+        background-image: url(Bilder/Sommerbakgrunn.jpg);
+        background-size: 100%;
+        background-repeat: repeat;
+        padding: 16px;
+
+
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Velkommen til min første nettside</h1>
+        <div>Hei, jeg heter Marlene <br>
+            Året er 1993! <br>
+            Bor for tiden i Larvik, og koser meg der :)
+            Elsker mennesker, og har tidligere jobbet som sykepleier - nå håper jeg å kunne bruke this passion på en
+            annen
+            måte.
+        </div>
+        <img src="Bilder/Marlenebriller.jpg" height="200px">
+        <ul>Jeg liker:</ul>
+        <li>Pusling</li>
+        <li>Være med venner</li>
+        <li>Synge</li>
+        <li>Sol og sommer</li>
+        <li>Å grave dypt</li>
+        <br>
+        <button onclick="endreBakgrunn()">Trykk her for å endre bakgrunnsfargen</button>
+        <br>
+        <br>
+        <button onclick="endreBakgrunnsBilde()">Trykk her for good vibes</button>
+    </div>
+    <script>
+        let color = ['red', 'blue', 'green', 'yellow', 'pink']
+        function endreBakgrunn() {
+            if (document.body.classList.contains('styledimg')) {
+                document.body.classList.remove('styledimg');
+            }
+            document.body.classList.add('bakgrunn');
+        }
+        function endreBakgrunnsBilde() {
+            if (document.body.classList.contains('bakgrunn')){
+                document.body.classList.remove('bakgrunn');
+            }
+            document.body.classList.add('styledimg');
+        }
+    </script>
+</body>
+
+</html>

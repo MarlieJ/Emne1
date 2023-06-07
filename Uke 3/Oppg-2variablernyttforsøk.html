@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body.bakgrunn {
+            background-color: yellow;
+            height: 10cm;
+            padding: 16px;
+        }
+
+
+        .rosa {
+            background-color: pink;
+        }
+
+        .grønn {
+            background-color: lightgreen;
+        }
+
+        .blå {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="helBakgrunn" style="backrground-color: yellow;">
+        <p></p>
+    </div>
+    <div class="rosa">rosa</div>
+    <div class="grønn">grønn</div>
+    <div class="blå">blå</div>
+
+    <button onclick="byttHeleBakgrunnen()">Trykk her for å endre hele bakgrunnen</button>
+
+    <script>
+        divVariabel.style.detManVilStyle = "ny propertyverdi man vil ha"
+        // let bakgrunnsfarge = document.getElementById('helBakgrunn')
+
+        function byttHeleBakgrunnen() {
+            document.body.classList.toggle("bakgrunn");
+        }
+    </script>
+</body>
+
+</html>

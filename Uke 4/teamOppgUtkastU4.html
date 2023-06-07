@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .sulten{
+            border: solid;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="startTimer(this)">Start spill</button>
+    <img src="https://cdn.discordapp.com/attachments/1062368663484780597/1062713953144279142/IMG_1683.JPG" width="200"> 
+    <div id="matId" class="sulten" onclick=""></div>
+    <button id= "addFem" onclick="addFem()">Mat</button>
+
+<script>
+    const tidenGår = document.getElementById ('matId');
+    const timerText = document.getElementById ('addFem');
+
+    let secounds = 100;
+    //if sek mer enn 100, så slutt knapp
+
+    setInterval()
+
+    function startTimer(slutt){
+        setInterval(countSecounds, 500);
+        slutt.disabled = true
+
+    }
+
+    function countSecounds(){
+        tidenGår.innerHTML = secounds;
+        secounds--;
+    }
+
+    function addFem(){
+        // tidenGår.innerHTML = secounds;
+        secounds = secounds + 5;
+    }
+
+</script>
+
+</body>
+</html>

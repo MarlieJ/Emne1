@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Input id="textinput" type="text" onchange="updateText()">
+    <div id="result">result here: </div>
+    <script>
+        function updateText(){
+        let text = document.getElementById('textinput').value;
+        checkIfIncludesSarcasm(text)
+        }
+        function checkIfIncludesSarcasm(textToCheck){
+            // hvis texttocheck inneholder stringen/teksten (...) så skal man gjøre noe i if-klammene
+            let includesSarcasm = textToCheck.includes('...')
+            console.log(includesSarcasm)
+            if (includesSarcasm == true){
+                //dersom icludessarcasm = true kommer vi hit
+                document.getElementById('result').innerHTML = 'Sarcasm detected!'
+            }
+            else {
+                document.getElementById('result').innerHTML = 'No sarcasm detected!'
+
+
+            }
+            
+            //if(textToCheck.includes('...')){}
+        }
+        function updateView(){
+            
+        }
+    </script>
+</body>
+</html>

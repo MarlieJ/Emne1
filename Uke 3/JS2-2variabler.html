@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Thenumber"></div>
+    <button onclick="setNum(16)">set number to 16</button>
+    <button onclick="setNum(47)">set number to 47 </button>
+    <br><br>
+    <button onclick="increaseNum()">Increase number with one</button>
+    <button onclick="secondNum()">Pluss 2</button>
+
+    <script>
+        var Nummerdiv = document.getElementById('Thenumber');
+        var nummersomvises = 0;
+
+        function setNum(selectedNum) {
+            nummersomvises = selectedNum;
+            Nummerdiv.innerHTML = nummersomvises;
+        }
+        function increaseNum(){
+            nummersomvises++;
+            Nummerdiv.innerHTML = nummersomvises;
+        }
+        function secondNum(){
+            var number2 = 2;
+            Nummerdiv.innerHTML = nummersomvises + number2;
+
+            console.log(nummersomvises, " <-dette er verdien i nummersomvises -- dette er verdien i number 2->",number2)
+
+        }
+        
+    </script>
+</body>
+
+</html>

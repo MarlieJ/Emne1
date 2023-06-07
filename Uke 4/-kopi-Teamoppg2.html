@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sulten {
+            border: solid;
+            width: 300px;
+            height: 20px;
+        }
+
+        .drikke {
+            border: solid;
+            width: 300px;
+            height: 20px;
+        }
+
+        .lek {
+            border: solid;
+            width: 300px;
+            height: 20px;
+        }
+
+        .syk {
+            border: solid;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="startTimer(this)">Start spill</button>
+
+    <img src="https://cdn.discordapp.com/attachments/1062368663484780597/1062713953144279142/IMG_1683.JPG" width="200">
+
+    <div id="matId" class="sulten"></div>
+    <button id="addFem1" onclick="addFem()">Mat</button>
+
+    <p>
+
+    <div id="tørstId" class="drikke"></div>
+    <button id="addFem2" onclick="addFem1()">Drikke</button>
+
+    </p>
+
+    <div id="lekId" class="lek"></div>
+    <button onclick="addTi()">Leke</button>
+
+    <p>
+
+    <div id="sykId" class="syk"></div>
+    <button onclick="addHundre()">Medisin</button>
+
+    </p>
+
+    <script>
+        const matGår = document.getElementById('matId');
+        const lekGår = document.getElementById('lekId');
+        const tørstGår = document.getElementById('tørstId');
+        const sykGår = document.getElementById('sykId');
+
+        const timerText = document.getElementById('addFem1');
+        const timerText1 = document.getElementById('addFem2');
+        const timerText2 = document.getElementById('addTi');
+        const timerText3 = document.getElementById('addHundre');
+
+
+        let ma = 100;
+        let tø = 100;
+        let le = 100;
+        let sy = 100;
+
+
+        function startTimer(slutt) {
+            setInterval(telleMa, 200);
+            setInterval(telleTø, 200);
+            setInterval(telleLe, 200);
+            setInterval(telleSy, 400);
+            slutt.disabled = true
+        }
+        
+        
+        function telleMa() {
+            matGår.innerHTML = ma;
+            ma--;
+            if (ma < 0) {
+                ma = 0;
+            }
+        }
+        function telleTø() {
+            tørstGår.innerHTML = tø;
+            tø--;
+            if (tø < 0) {
+                tø = 0;
+            }
+        }
+        function telleLe() {
+            lekGår.innerHTML = le;
+            le--;
+            if (le < 0) {
+                le = 0;
+            }
+        }
+        function telleSy() {
+            sykGår.innerHTML = sy;
+            if (ma < 25 || tø < 25 || le < 25)
+                sy--;
+            else if (ma > 75 && tø > 75 && le > 75)
+                if (sy < 100)
+                    sy++;
+        }
+        
+
+        function addFem() {
+            ma += 5;
+            if (ma > 100)
+                ma = 100;
+        }
+        function addFem1() {
+            tø += 5;
+            if (tø > 100)
+                tø = 100;
+        }
+        function addTi() {
+            le += 10;
+            if (le > 100)
+                le = 100;
+        }
+        function addHundre() {
+            sy = 100;
+            if (sy > 100)
+                sy = 100;
+        }
+    </script>
+
+</body>
+
+</html>

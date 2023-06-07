@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .klokkeytre {
+        background-color: magenta;
+        height: 250px;
+        width: 220px;
+        border-radius: 10% 10% 50% 50%;
+        padding: 20px;
+    }
+
+    .klokkeknapp {
+        margin-top: 20px;
+        margin-left: 15px;
+        border-radius: 50%;
+        height: 55px;
+        width: 50px;
+    }
+
+    .klokkedisplay {
+        height: 20px;
+        width: 100px;
+        border: 1px solid black;
+        margin-top: 30px;
+        margin-left: 70px;
+        background-color: antiquewhite;
+    }
+
+    .rundetiddisplay {
+        background-color: antiquewhite;
+        height: 50px;
+        width: 100px;
+        border: 1px solid black;
+        margin-left: 70px;
+        font-size: x-small;
+
+    }
+</style>
+
+<body>
+    <div class="klokkeytre">
+        <button class="klokkeknapp" onclick="startTimer()">Start Timer!</button>
+        <button class="klokkeknapp" onclick="pauseTimer()">Runde</button>
+        <button class="klokkeknapp" onclick="stopAll()" >Stopp</button>
+
+        <div id="klokkeTidDisplay" class="klokkedisplay"></div>
+        RUNDETIDER:
+        <div id="stoppRunde" class="rundetiddisplay"></div>
+    </div>
+
+    <script>
+        const tidenGår = document.getElementById('klokkeTidDisplay');
+        const rundeTid = document.getElementById('stoppRunde');
+        let seconds = 0;
+        var timer;
+
+
+        function startTimer(){
+            setInterval(countSeconds, 1000);
+        }
+        
+
+        function countSeconds (){
+        tidenGår.innerHTML = seconds;
+        seconds++;
+        }
+
+        function pauseTimer(){
+            rundeTid.innerHTML += `<li>${seconds-1}sekunder</li>`;
+            clearInterval(timer);
+            seconds = 0;
+        }
+        function stopAll(){
+            location.reload()
+        }
+    
+        
+
+    </script>
+</body>
+
+</html>

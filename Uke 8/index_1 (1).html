@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="game">
+    </div>
+
+    <script>
+        goToA();
+
+        function goToRoomWithTwoDoors(roomName, door1, door2) {
+            document.getElementById('game').innerHTML = /*html*/`            
+                Du er i rom ${roomName}. Det er to dører:
+                <ul>
+                    <li><button onclick="goTo${door1}()">Gå til ${door1}</button></li>
+                    <li><button onclick="goTo${door2}()">Gå til ${door2}</button></li>
+                </ul>          
+                `;
+        }
+
+
+        function goToA() {
+            goToRoomWithTwoDoors('A', 'B', 'D');
+        }
+
+        function goToB() {
+            goToRoomWithTwoDoors('B', 'C', 'A');
+        }
+
+        function goToC() {
+            document.getElementById('game').innerHTML = /*html*/`            
+            Du er i rom C. Det er én dør:
+            <ul>
+                <li><button onclick="goToB()">Gå til B</button></li>
+            </ul>            
+            `;
+        }
+
+        function goToD() {
+            document.getElementById('game').innerHTML = /*html*/`            
+            Du klarte det!
+            Du er i rom D. Det er én dør:
+            <ul>
+                <li><button onclick="goToA()">Gå til A</button></li>
+            </ul>            
+            `;
+        }
+
+    </script>
+</body>
+
+</html>

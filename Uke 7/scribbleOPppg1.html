@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.synlig {
+        padding: 50px;
+        margin: 50px;
+        border: solid black 2px;
+        border-style: dashed;
+    }
+
+    .rød {
+        background-color: red;
+        width: auto;
+        height: auto;
+        
+    }
+    .grønn {
+        background-color: green;
+        width: auto;
+        height: auto;
+        
+    }
+    .blå {
+        background-color: blue;
+        width: auto;
+        height: auto;
+        
+    }
+
+    div {
+        cursor: pointer;
+    }
+
+    body.lightgreen {
+        background-color: rgb(26, 219, 26);
+    }
+</style>
+
+<body>
+    <div onclick="pushColor('rgb(219, 49, 26)')">RØD</div>
+    <div onclick="pushColor('green')">GRØNN</div>
+    <div onclick="pushColor('blue')">BLÅ</div>
+    <button onclick="endreHele()">Endre hele bakgrunnsfargen</button>
+    <div onclick="pushToDiv(this)"  class="synlig"></div>
+    <div onclick="pushToDiv(this)" class="synlig"></div>
+
+
+    <script>
+       
+        let lolcolor = '';
+
+        function pushColor(farger){
+            lolcolor=farger
+        }
+        function pushToDiv(divType){
+            //divType.style.backgroundColor = rgb +lolcolor
+            divType.style.backgroundColor = lolcolor
+            //console.log(divType.style.backgroundColor)
+        }
+        /* function pushRed() {
+            div1.classList.add('rød');
+        }
+        function pushGreen() {
+            div1.classList.add('grønn');
+        }
+        function pushBlue() {
+            div1.classList.add('blå');
+        } */
+        function endreHele() {
+            document.body.style.backgroundColor=lolcolor
+            //document.body.classList.toggle('lightgreen');
+        }
+        //divVariabel.style.detManVilStyle = "ny propertyverdi man vil ha
+        //div1.style.background-color = "red"
+    </script>
+</body>
+
+</html>

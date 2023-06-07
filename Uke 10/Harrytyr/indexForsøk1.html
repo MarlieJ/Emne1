@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //MODEL
+        let nyVare = '';
+        let varerJegAlleredeHarPåLista = ['Biff', 'Indrefilet', 'Bacon', 'Godteri', 'CapriSonne', 'Øl']
+        //let emojis = ['🥩', '🍖', '🥓', '🍭', '🧃', '🍻'];
+        /* for (let j = 0; j < emojis.length; j++) {
+                        ${emjois[j]}} */
+        visSide()
+        function visSide(){
+            let html = "";
+
+            for (let i = 0; i < varerJegAlleredeHarPåLista.length; i++) {
+                html += /*html*/`
+                    <li>
+                        ${varerJegAlleredeHarPåLista[i]}
+                        <button onclick="byttVare(${i})"> Bytt vare </button>
+                        <button onclick="slettVare(${i})"> Slett vare </button>
+                    </li>
+                        `;
+            }
+            html += /*html*/ `<input oninput="tekst(this)" type="text">
+            <button onclick="leggTilVare()"> Legg til vare </button>`;
+            document.getElementById('app').innerHTML = html;
+        }
+
+        function tekst(mottarThis){
+        nyVare = mottarThis.value;
+        }
+
+        function leggTilVare(){
+            varerJegAlleredeHarPåLista.push(nyVare);
+            nyVare='';
+            visSide()
+        }
+
+        function byttVare(index){
+            varerJegAlleredeHarPåLista[index] = nyVare;
+            visSide();
+        }
+
+        function slettVare(index){
+            varerJegAlleredeHarPåLista.splice(index,1)
+            visSide();
+        }
+
+    </script>
+</body>
+</html>

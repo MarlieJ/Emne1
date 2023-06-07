@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv"></div>
+    <button onclick="knapper('pink','50','200')">test 1</button>
+    <button onclick="knapper('#ffc400','25','200')">test 2</button>
+
+    <script>
+        function knapper(color,bredde,høyde){
+            document.getElementById('mainDiv').innerHTML = /*html*/`
+            <div style="background-color:${color}; width: ${bredde}%; height: ${høyde}px;"></div>
+            `;
+        }
+
+    </script>
+</body>
+</html>

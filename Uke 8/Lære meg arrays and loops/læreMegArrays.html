@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lærer meg Arrays</title>
+</head>
+<body>
+
+    <div id="gameboard"></div>
+    
+    <script>
+
+let gruppeNavn = ['Alex', 'Bettina', 'Sandra', 'Philip', 'Sebastian']
+let length = gruppeNavn.length; //midlertid variabel siden vi manipulerer array inni for loopen, og stoler på den for at koden skal fungere
+console.log("MARLENE SIN:")
+for (let index = 0; index < length; index++) {
+    //console.log(gruppeNavn[index] + ' er del av gruppa mi! <-- Marlene sin') //GRØNN TUSJ
+    let randomNumber = Math.floor(Math.random()*gruppeNavn.length); //velg et tilfeldig tall
+    console.log(gruppeNavn[randomNumber]); //print ut navnet på index[tilfeldig tall]
+    gruppeNavn.splice(randomNumber, 1); //fjern det tilfeldig navnet vi valgte fra arrayet
+    // ['Alex', 'Bettina', 'Sandra', 'Philip', 'Sebastian'] indexen er 0 - lengden på arrayet er 4
+    // ['Bettina', 'Sandra', 'Philip', 'Sebastian'] indexen er 1 - lengden på arrayet er 3
+    // ['Bettina', 'Sandra', 'Sebastian'] indexen er 2 - lengden på arrayet er 2
+}
+        //        0  1  2  3  4  5  6  7  8  9 <- index
+// let tellerTall = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//console.log(tellerTall[4]);
+/* let tellerTall1 = 1;
+let tellerTall2 = 2;
+
+let tellerTall3 = tellerTall1 + tellerTall2;
+console.log(tellerTall3); */
+
+// console.log(tellerTall[4]);
+
+// let index = 4;
+// console.log(tellerTall[index]);
+
+// for (let i = 0; i < tellerTall.length; i++) {
+//     console.log(tellerTall[i]);
+// }
+
+/* for (let index = 0; index < 5; index++) {
+    tellerTall1;
+    console.log(tellerTall1 + index)
+}
+console.log(tellerTall1)
+ */
+
+
+/*
+Inni en for loop:
+Istedenfor for indexen i en for loop, bruk math.random til å velge et tilfeldig menneske og print det til konsollen
+Men ikke print det samme navnet to ganger!
+*/
+
+let navn = ['Alex', 'Marlene', 'Philip', 'Bettina', 'Sebastian']
+console.log("SANDRA SIN:")
+
+for (let i = 0; i < navn.length; i++){
+    //console.log(navn[i] + " er del av gruppa mi!"); //GRØNN TUSJ
+    let rndNavn = Math.floor(Math.random() * navn.length);
+    console.log(navn[rndNavn]);
+    navn.splice(rndNavn, 1);
+} 
+</script> 
+</body>
+</html>
