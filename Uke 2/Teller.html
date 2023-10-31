@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.endreFarge{
+    background-color: pink;
+    
+}
+</style>
+<body>
+    <button onclick="tellerminus()">tell ned</button>
+    <div id="numberone">1</div>
+    <button onclick="tellerpluss()">tell opp</button>
+
+<script>
+    let tall = document.getElementById('numberone');
+    let teller = 1;
+    function tellerminus(){
+        document.getElementById('numberone').innerHTML --;
+    }
+    function tellerpluss(){
+        tall.innerHTML =  teller;
+        teller ++;
+        if (teller == 5)
+            classList.add('endreFarge');
+    }
+    console.log(classList.endreFarge);
+    
+
+        
+    
+</script>
+</body>
+</html>
